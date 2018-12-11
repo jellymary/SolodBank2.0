@@ -1,0 +1,31 @@
+.pay
+{
+  /*clear: right;*/
+  border-top: 1px solid lightgrey;
+  padding: 20px;
+}
+
+.pay > label
+{
+  color: #3b93be;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+.pay > input#payment:checked ~ label[for='payment'],
+.pay > input#get-payment:checked ~ label[for='get-payment']
+{
+  color: black;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+button
+{
+  margin-right: 15px;
+  margin-bottom: 15px;
+}

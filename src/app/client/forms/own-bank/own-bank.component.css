@@ -1,0 +1,33 @@
+.own-bank form .fields
+{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 30px;
+  padding-bottom: 30px;
+}
+
+input[type='text'],
+input[type='email']
+{
+  border: none;
+  border-bottom: 2px solid lightgrey;
+  max-width: 500px;
+}
+
+.nds-fields label
+{
+  padding: 7px 10px;
+  border: 2px solid white;
+}
+
+.nds-fields input.nds18:checked ~ label.nds18,
+.nds-fields input.nds10:checked ~ label.nds10,
+.nds-fields input.without-nds:checked ~ label.without-nds
+{
+  border: 2px solid lightgray;
+}
+
+input[type='radio']
+{
+  display: none;
+}

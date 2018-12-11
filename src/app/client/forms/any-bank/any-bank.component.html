@@ -1,0 +1,16 @@
+<section class="any-bank">
+  <form>
+    <div class="credit-card">
+      <input id="card-number" type="text" placeholder="Номер карты" pattern="[0-9]{16}" required>
+      <input id="date" type="text" placeholder="ММ/ГГ" required>
+      <input id="cvc" type="text" placeholder="CVC" pattern="[0-9]{3}" required>
+    </div>
+    <label for="sum">Сумма</label>
+    <input id="sum" type="text" placeholder="от 1000 до 75000&#x20bd;" pattern="[0-9]*" required>
+    <label for="comment">Комментарий</label>
+    <input id="comment" type="text" placeholder="До 150 символов">
+    <label for="email">Ваша эл.почта</label>
+    <input id="email" type="email" placeholder="Для квитанции об оплате" required>
+    <button type="submit">Заплатить</button>
+  </form>
+</section>

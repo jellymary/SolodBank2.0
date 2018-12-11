@@ -1,0 +1,54 @@
+.any-bank form
+{
+  display: grid;
+  grid-template-columns: 1fr 200px 1.5fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 40px;
+}
+
+.any-bank .credit-card
+{
+  grid-row: span 5;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 5px  5px 25px rgba(0,0,0,0.3);
+  display: grid;
+  grid-template:
+    'images images' 1fr
+    'card-number card-number' 1fr
+    'date cvc' 1fr
+        / 1fr 1fr;
+  grid-gap: 20px;
+  padding: 30px 20px;
+  margin: 0 20px 20px 0;
+}
+
+.any-bank .credit-card #card-number,
+.any-bank .credit-card #date,
+.any-bank .credit-card #cvc
+{
+  background-color: #f9f9f9;
+}
+
+.any-bank .credit-card #card-number
+{
+  grid-area: card-number;
+}
+
+.any-bank .credit-card #date
+{
+  grid-area: date;
+}
+
+.any-bank .credit-card #cvc
+{
+  grid-area: cvc;
+}
+
+input[type='text'],
+input[type='email']
+{
+  border: none;
+  border-bottom: 2px solid lightgrey;
+  max-width: 500px;
+}

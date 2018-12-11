@@ -1,0 +1,39 @@
+<section class="client">
+  <img id="client-photo" src="images/client-logo.jpg" alt="Фото/логотип клиента">
+  <div class="client-info">
+    <h3>
+      <span>
+        Индивидуалный предприниматель
+        <span class="client-name">{{[client.surname, client.name, client.middleName].join(' ')}}</span>
+      </span>
+    </h3>
+    <section class="contacts">
+      <a href="tel:{{client.phoneNumber}}">{{client.phoneNumber}}</a>
+      <a href="http://{{client.website}}">{{client.website}}</a>
+      <a href="mailto:{{client.email}}">{{client.email}}</a>
+    </section>
+    <a href="#">Информация о компании</a>
+    <a href="#">Показать реквизиты</a>
+  </div>
+</section>
+<app-forms></app-forms>
+<section class="company-info">
+  <p>О компании <span>Индивидуальный предприниматель Швецова Мария Валерьевна</span></p>
+  <section class="services">
+    <div class="service">
+      <img src="images/markup.jpg" alt="markup">
+      <h3>Вёрстка сайта</h3>
+      <p class="price">за еду</p>
+    </div>
+    <div class="service">
+      <img src="images/client-side.jpg" alt="client-side">
+      <h3>Клиентская часть сайта</h3>
+      <p class="price">от 15000 руб.</p>
+    </div>
+    <div class="service">
+      <img src="images/server-side.jpg" alt="server-side">
+      <h3>Серверная часть сайта</h3>
+      <p class="price">1000 р/час</p>
+    </div>
+  </section>
+</section>

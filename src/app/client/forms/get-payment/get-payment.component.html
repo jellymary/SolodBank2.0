@@ -1,0 +1,36 @@
+<section class="get-payment">
+  <p>
+    Создайте платёжку, а Индивидуальный предприниматель <span>Швецова Мария Валерьевна</span>
+    подпишет её у себя в интернет-банке
+  </p>
+  <form>
+    <div class="fields">
+      <label for="inn__get-payment">ИНН получателя</label>
+      <input id="inn__get-payment" type="text" placeholder="ИНН или название получателя" required>
+      <label for="bik__get-payment">БИК</label>
+      <input id="bik__get-payment" type="text" required>
+      <label for="account__get-payment">Номер счёта</label>
+      <input id="account__get-payment" type="text" placeholder="" required>
+      <label for="reason__get-payment">За что</label>
+      <input id="reason__get-payment" type="text" placeholder="Наименование платежа" required>
+      <label>НДС</label>
+      <div class="nds-fields">
+        <input id="nds18__get-payment" type="radio" name="nds" class="nds18">
+        <label for="nds18__get-payment" class="nds18">НДС 18%</label>
+        <input id="nds10__get-payment" type="radio" name="nds" class="nds10">
+        <label for="nds10__get-payment" class="nds10">НДС 10%</label>
+        <input id="without-nds__get-payment" type="radio" name="nds" class="without-nds">
+        <label for="without-nds__get-payment" class="without-nds">без НДС</label>
+      </div>
+      <label for="amount__get-payment">Сколько</label>
+      <input id="amount__get-payment" type="text" placeholder="Сумма запроса" required>
+      <label for="phone__get-payment">Номер телефона</label>
+      <input id="phone__get-payment" type="text" placeholder="+7" required>
+      <a href="#">Оставляя телефон, вы соглашаетесь на обработку персональных данных</a>
+      <label for="email__get-payment">Ваша эл.почта</label>
+      <input id="email__get-payment" type="email" placeholder="Для уведомления об оплате" required>
+    </div>
+    <button type="submit">Создать платёж</button>
+    <button type="reset">Очистить форму</button>
+  </form>
+</section>

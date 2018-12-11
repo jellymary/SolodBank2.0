@@ -1,0 +1,75 @@
+a
+{
+  color: #3b93be;
+  text-decoration: none;
+}
+
+a:visited
+{
+  color: #ffa3b4;
+}
+
+.client
+{
+  padding: 20px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.client > img
+{
+  float: right;
+  height: 150px;
+  margin: 0 15px 15px;
+  /*border: 1px solid lightgrey;*/
+  /*box-shadow: 0 0 10px rgba(0,0,0,0.1);*/
+}
+
+.client > h3
+{
+  margin: 0;
+}
+
+.client .client-info
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.client .contacts > a
+{
+  margin-right: 15px;
+}
+
+.client .client-info a:last-child
+{
+  padding: 15px 0;
+}
+
+.company-info
+{
+  padding: 15px;
+  border-top: 2px solid lightgray;
+}
+
+.company-info .services
+{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.company-info .service
+{
+  padding: 15px;
+  border: 2px solid lightgrey;
+  height: 250px;
+  /*display: grid;*/
+  /*grid-template: 'image';*/
+}
+
+.service img
+{
+  /*width: 100%;*/
+  height: 50%;
+}
+

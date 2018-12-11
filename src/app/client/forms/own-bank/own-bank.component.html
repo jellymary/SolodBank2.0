@@ -1,0 +1,28 @@
+<section class="own-bank">
+  <p>Сформируйте платёжку и загрузите её в свой банк для подписи</p>
+  <form>
+    <div class="fields">
+      <label for="inn__own-bank">От кого</label>
+      <input id="inn__own-bank" type="text" placeholder="ИНН или название плательщика" required>
+      <label for="bik__own-bank">БИК</label>
+      <input id="bik__own-bank" type="text" required>
+      <label for="account__own-bank">Номер счёта</label>
+      <input id="account__own-bank" type="text" placeholder="" required>
+      <label for="reason__own-bank">За что</label>
+      <input id="reason__own-bank" type="text" placeholder="Наименование платежа" required>
+      <label>НДС</label>
+      <div class="nds-fields">
+        <input id="nds18__own-bank" type="radio" name="nds" class="nds18">
+        <label for="nds18__own-bank" class="nds18">НДС 18%</label>
+        <input id="nds10__own-bank" type="radio" name="nds" class="nds10">
+        <label for="nds10__own-bank" class="nds10">НДС 10%</label>
+        <input id="without-nds__own-bank" type="radio" name="nds" class="without-nds">
+        <label for="without-nds__own-bank" class="without-nds">без НДС</label>
+      </div>
+      <label for="amount__own-bank">Сколько</label>
+      <input id="amount__own-bank" type="text" placeholder="Сумма запроса" required>
+    </div>
+    <button type="submit">Получить файл для интерент-банка</button>
+    <button type="reset">Очистить форму</button>
+  </form>
+</section>

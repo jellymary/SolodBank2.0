@@ -54,7 +54,7 @@ a:visited
 .company-info .services
 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
 }
 
@@ -67,7 +67,12 @@ a:visited
   /*grid-template: 'image';*/
 }
 
-.service img
+.service:hover
+{
+  box-shadow: 0 0 10px lightgray;
+}
+
+.services__image
 {
   /*width: 100%;*/
   height: 50%;

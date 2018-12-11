@@ -1,0 +1,63 @@
+.svg-sprite
+{
+  display: none;
+}
+
+header
+{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 7px 0;
+  margin-bottom: 15px;
+  background: #e6f3f7;
+  border-radius: 20px 0 20px;
+}
+
+header > .logo > h1
+{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 36px;
+  margin: 0;
+}
+
+header > .logo > .slogan
+{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  margin: 0;
+  color: #323232;
+}
+
+header > .logo
+{
+  padding: 0 15px;
+}
+
+header > h2
+{
+  padding: 0 15px;
+  margin: auto auto auto 0;
+  font-size: 200%;
+}
+
+footer
+{
+  display: flex;
+  margin: 15px;
+}
+
+footer .icon
+{
+  width: 30px;
+  height: 30px;
+  margin: 0 1px;
+}
+
+footer .author
+{
+  margin-left: auto;
+  margin-top: auto;
+  font: 14px "Kaushan Script";
+  color: #85c4d9;
+  text-decoration: none;
+}

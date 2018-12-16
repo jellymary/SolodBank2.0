@@ -18,7 +18,12 @@
 </section>
 <app-forms></app-forms>
 <section class="company-info">
-  <p>О компании <span>Индивидуальный предприниматель Швецова Мария Валерьевна</span></p>
+  <p>О компании
+    <span>
+        Индивидуалный предприниматель
+        <span class="client-name">{{[client.surname, client.name, client.middleName].join(' ')}}</span>
+    </span>
+  </p>
   <section class="services">
     <div class="service">
       <img src="../../assets/images/markup.jpg" alt="markup" class="services__image">

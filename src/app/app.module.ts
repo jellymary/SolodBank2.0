@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {Directive, NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +10,8 @@ import { GetPaymentComponent } from './client/forms/get-payment/get-payment.comp
 import { PaymentComponent } from './client/forms/payment/payment.component';
 import { AnyBankComponent } from './client/forms/any-bank/any-bank.component';
 import { OwnBankComponent } from './client/forms/own-bank/own-bank.component';
+import { MyServerComponent } from './my-server/my-server.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,11 +21,13 @@ import { OwnBankComponent } from './client/forms/own-bank/own-bank.component';
     GetPaymentComponent,
     PaymentComponent,
     AnyBankComponent,
-    OwnBankComponent
+    OwnBankComponent,
+    MyServerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],

@@ -52,15 +52,3 @@ input[type='email']
   border-bottom: 2px solid lightgrey;
   max-width: 500px;
 }
-
-.error__box
-{
-  border-radius: 0 10px 10px;
-  color: white;
-  background-color: #b4dbe6;
-}
-
-.error__message
-{
-  padding: 10px;
-}

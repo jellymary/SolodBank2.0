@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-get-payment',
@@ -11,5 +12,7 @@ export class GetPaymentComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  submit(form: NgForm) {}
 
 }

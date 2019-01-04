@@ -1,28 +1,53 @@
 <section class="own-bank">
   <p>Сформируйте платёжку и загрузите её в свой банк для подписи</p>
-  <form>
+  <form #obForm="ngForm" (ngSubmit)="submit(obForm)">
     <div class="fields">
       <label for="inn__own-bank">От кого</label>
-      <input id="inn__own-bank" type="text" placeholder="ИНН или название плательщика" required>
+      <input id="inn__own-bank" type="text" placeholder="ИНН или название плательщика"
+             pattern="[0-9]{10,12}" minlength="10" maxlength="12" required
+             name="inn" ngModel #i="ngModel">
       <label for="bik__own-bank">БИК</label>
-      <input id="bik__own-bank" type="text" required>
+      <input id="bik__own-bank" type="text" pattern="[0-9]{9}" maxlength="9" required
+             name="bik" ngModel #b="ngModel">
       <label for="account__own-bank">Номер счёта</label>
-      <input id="account__own-bank" type="text" placeholder="" required>
+      <input id="account__own-bank" type="text" placeholder="" required
+             maxlength="20" pattern="[0-9]{20}"
+             name="accountNumber" ngModel #a="ngModel">
       <label for="reason__own-bank">За что</label>
-      <input id="reason__own-bank" type="text" placeholder="Наименование платежа" required>
+      <input id="reason__own-bank" type="text" placeholder="Наименование платежа" required
+             name="reason" ngModel #r="ngModel">
       <label>НДС</label>
       <div class="nds-fields">
-        <input id="nds18__own-bank" type="radio" name="nds" class="nds18">
+        <input id="nds18__own-bank" type="radio" name="nds" required class="nds18" value="18" ngModel>
         <label for="nds18__own-bank" class="nds18">НДС 18%</label>
-        <input id="nds10__own-bank" type="radio" name="nds" class="nds10">
+        <input id="nds10__own-bank" type="radio" name="nds" class="nds10" value="10" ngModel>
         <label for="nds10__own-bank" class="nds10">НДС 10%</label>
-        <input id="without-nds__own-bank" type="radio" name="nds" class="without-nds">
+        <input id="without-nds__own-bank" type="radio" name="nds" class="without-nds" value="0" ngModel>
         <label for="without-nds__own-bank" class="without-nds">без НДС</label>
       </div>
       <label for="amount__own-bank">Сколько</label>
-      <input id="amount__own-bank" type="text" placeholder="Сумма запроса" required>
+      <input id="amount__own-bank" type="text" placeholder="от 1000 до 75000&#x20bd;"
+             required maxlength="5" minlength="4" pattern="[1-9][0-9]*"
+             name="sum" ngModel #s="ngModel">
     </div>
-    <button type="submit">Получить файл для интерент-банка</button>
+    <button type="submit" [disabled]="obForm.invalid">
+      Получить файл для интернет-банка
+    </button>
     <button type="reset">Очистить форму</button>
   </form>
+  <div [hidden]="i.valid || i.untouched" class="error__box">
+    <p class="error__message">Неверный ИНН</p>
+  </div>
+  <div [hidden]="b.valid || b.untouched" class="error__box">
+    <p class="error__message">Неверный БИК</p>
+  </div>
+  <div [hidden]="a.valid || a.untouched" class="error__box">
+    <p class="error__message">Неверный номер счёта</p>
+  </div>
+  <div [hidden]="r.valid || r.untouched" class="error__box">
+    <p class="error__message">"Наименование платежа" не может быть пустым</p>
+  </div>
+  <div [hidden]="s.valid || s.untouched" class="error__box">
+    <p class="error__message">Сумму платежа от 1000 до 75000&#x20bd;</p>
+  </div>
 </section>

@@ -40,3 +40,15 @@
   font-family: "Open Sans", sans-serif;
 }
 
+.error__box
+{
+  border-radius: 0 10px 10px;
+  color: white;
+  background-color: #b4dbe6;
+}
+
+.error__message
+{
+  padding: 10px;
+}
+

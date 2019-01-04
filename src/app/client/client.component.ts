@@ -9,7 +9,7 @@ export class ClientComponent implements OnInit {
   public client: Client;
 
   constructor() {
-    this.client = new Client('Кузовлева', 'Мария', 'Николавна',
+    this.client = new Client('Неуймина', 'Клавдия', 'Аскольдовна',
       '+79820001122', 'mary@gmail.com', 'www.mary.com');
   }
 
